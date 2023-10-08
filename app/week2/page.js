@@ -1,7 +1,8 @@
 import React from 'react';
-//import StudentInfo from 'C:\Users\kevin\Desktop\cprg306-assignments\app\studentInfo.js';
+import StudentInfo from 'app/studentInfo'; // Adjust the path as needed
+
 function Week2Page() {
-  return (
+  return (  
     <div>
       <h1>My Shopping list</h1>
       
