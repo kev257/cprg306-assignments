@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import StudentInfo from './studentInfo'; // Correct relative path
+import Link from 'next/link'; // Import Link from Next.js
 
 export default function Home() {
   return (
@@ -110,7 +111,22 @@ export default function Home() {
         </a>
       </div>
 
+      <div>
+      <h1>CPRG 306: Web Development 2 - Assignments</h1>
       
+      {/* Render StudentInfo */}
+      <StudentInfo />
+      
+      {/* Add a link to /week2 */}
+      <Link href="app\week2">
+        <a>Go to Week 2</a>
+      </Link>
+
+      <Link href="app\week4">
+        <a>Go to Week 4</a>
+      </Link>
+    </div>
+  
       
     </main>
   )
