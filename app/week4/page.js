@@ -1,5 +1,5 @@
 import React from 'react';
-import NewItem from './new-item'; // Import the NewItem component
+import NewItem from './new-item'; 
 
 function Week4Page() {
   return (
