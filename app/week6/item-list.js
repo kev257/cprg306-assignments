@@ -31,8 +31,8 @@ return(
     </div>
      
 
-    <div className="text-center">
-      <button
+    <div className="text-center space-x-7 ">
+      <button 
         onClick={() => setSortBy('name')}
         style={{backgroundColor: sortBy === 'name' ? 'green' : 'transparent',}}>
         Sort by Name

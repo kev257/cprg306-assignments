@@ -1,15 +1,16 @@
 "use client";
-import react from 'react';
+import React from 'react';
 import Item from './items';
-import itemData from "./items.json";
+//import itemData from "./items.json";
 import { useState } from "react";
+//old line 31{itemList.map((item) => (<li className = "m-5 border-2 w-1/6 border-blue-200 grid gap-4 grid-cols-1" key={item.id}>{item.name} </li>))}
 
 
-export default function ItemList() {
+export default function ItemList({items, onItemSelect}) {
    
 const [sortBy, setSortBy] = useState('name');
 
-let itemList = itemData.map((item) => ({...item}));
+let itemList = items.map((item) => ({...item}));
 
 
 if (sortBy === 'name'){
@@ -26,9 +27,16 @@ return(
      
      <div>
       <h1 className= "py-8"> Item List </h1 >
-      
       <ul>
-        {itemList.map((item) => (<li className = "m-5 border-2 w-1/6 border-blue-200 grid gap-4 grid-cols-1" key={item.id}>{item.name} </li>))}
+      {itemList.map((item) => (
+            <Item
+              name={item.name}
+              quantity={item.quantity}
+              category={item.category}
+              key={item.id}
+              onSelect={() => onItemSelect(item.name)}
+            />
+          ))}
       </ul>
     </div>
      
@@ -46,17 +54,6 @@ return(
         Sort by Category
       </button>
     </div>
-    
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
       </>
 );
 
