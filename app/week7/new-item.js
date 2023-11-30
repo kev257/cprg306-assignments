@@ -26,7 +26,7 @@ export default function newItemFunction({onAddItem}) {
     <div>
       <h2 className="text-3xl" >Create a New Item</h2>
       <form onSubmit={handleSubmit}>
-        <label >
+        <label className = "mx-5">
           Name:
           <input className = "text-blue-600"
             type="text"
@@ -36,7 +36,7 @@ export default function newItemFunction({onAddItem}) {
           />
         </label>
 
-        <label>
+        <label className = "mx-5">
           Quantity:
           <input className = "text-blue-600"
             type="number"
@@ -48,7 +48,7 @@ export default function newItemFunction({onAddItem}) {
           />
         </label>
 
-        <label>
+        <label className = "mx-5">
           Category:
           <select className = "text-blue-600"
             value={category}
@@ -67,8 +67,8 @@ export default function newItemFunction({onAddItem}) {
             <option value="Other">Other</option>
           </select>
         </label>
-
-        <button type="submit">Submit</button>
+        <button className = "border-8 border-rose-600 p-2 bg-yellow-400 text-green-950" type="submit">Submit</button>
+   
       </form>
     </div>
   );

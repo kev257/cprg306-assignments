@@ -33,8 +33,17 @@ const [selectedItemName, setSelectedItemName] = useState('');
           {newItemFunction({ onAddItem: handleAddItem})}         
           {/* <ItemList items={items} />           */}
 
+<div className = "flex flex-row w-90">
+      <div className = "basis-1/4">
           <ItemList items={items} onItemSelect={handleItemSelect} />
+      </div>
+
+      <div className = "basis-1/2 pt-20">
           <MealIdeas ingredient={selectedItemName} />
+      </div>
+
+</div>
+
 
         </main>
       );

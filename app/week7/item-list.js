@@ -25,10 +25,29 @@ if (sortBy === 'category'){
 return(
     <>
      
+     <div className="text-center pt-10  flex flex-row">
+      <div className = "mx-5">
+      <button
+        onClick={() => setSortBy('name')}
+        style={{backgroundColor: sortBy === 'name' ? 'green' : 'transparent',}}>
+        Sort by Name
+      </button>
+      </div>
+
+<div className = "mx-5">
+      <button 
+        onClick={() => setSortBy('category')}
+        style={{backgroundColor: sortBy === 'category' ? 'green' : 'transparent',}}>
+        Sort by Category
+      </button>
+</div>
+
+    </div>
+
      <div>
       <h1 className= "py-8"> Item List </h1 >
       <ul>
-      {itemList.map((item) => (
+      {itemList?.map((item) => (
             <Item
               name={item.name}
               quantity={item.quantity}
@@ -41,19 +60,7 @@ return(
     </div>
      
 
-    <div className="text-center">
-      <button
-        onClick={() => setSortBy('name')}
-        style={{backgroundColor: sortBy === 'name' ? 'green' : 'transparent',}}>
-        Sort by Name
-      </button>
-
-      <button
-        onClick={() => setSortBy('category')}
-        style={{backgroundColor: sortBy === 'category' ? 'green' : 'transparent',}}>
-        Sort by Category
-      </button>
-    </div>
+    
       </>
 );
 

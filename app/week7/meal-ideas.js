@@ -75,14 +75,23 @@ const MealIdeas = ({ ingredient }) => {
        setMeals([]);
      }
   }, [ingredient]);
-
+console.log({meals});
 
   return (
     <div>
-      <h1>Meal Ideas</h1>
+      <h1 >Meal Ideas</h1>
+      {ingredient ?
+       (meals.length > 0 ?
+         <h2>Here are some meal ideas using {ingredient} </h2>:
+         <h2>There are no meal recipes using {ingredient} </h2>):
+      <h2>Please select an ingredient </h2> }
+      
+
+      
+    
       <ul>
         {meals.map((meal) => (
-          <li className="m-5 border-2 w-1/6 border-blue-200 grid gap-4 grid-cols-1" key={meal.idMeal}>
+          <li className="m-5 border-2 w-60 border-blue-200 grid gap-4 grid-cols-1" key={meal.idMeal}>
             {meal.strMeal}
           </li>
         ))}
